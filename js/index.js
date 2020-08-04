@@ -23,27 +23,58 @@
  //侧边栏点击
  $(".bro-btn:eq(0)").click(function () {
      console.log(1);
-     document.documentElement.scrollTop = 0;
+     animate(document.documentElement, {
+         scrollTop: 0
+     }, 500)
+     //document.documentElement.scrollTop = 0;
  })
  $(".bro-btn:eq(1)").click(function () {
-     //  animate(document.documentElement, {
-     //      scrollTop: 1073
-     //  })
-     document.documentElement.scrollTop = 1073;
+     animate(document.documentElement, {
+         scrollTop: 1073
+     }, 500)
+     //document.documentElement.scrollTop = 1073;
  });
  $(".bro-btn:eq(2)").click(function () {
-     //  animate(document.documentElement, {
-     //      scrollTop: 2160
-     //  })
-     document.documentElement.scrollTop = 2160;
+     animate(document.documentElement, {
+         scrollTop: 2160
+     }, 500)
+     //document.documentElement.scrollTop = 2160;
  })
  $(".bro-btn:eq(3)").click(function () {
-     //  animate(document.documentElement, {
-     //      scrollTop: 2880
-     //  })
-     document.documentElement.scrollTop = 3090;
+     animate(document.documentElement, {
+         scrollTop: 2880
+     }, 500)
+     //document.documentElement.scrollTop = 3090;
  })
-
+ //右侧导航
+ $(".right-btn li:eq(0)").click(function () {
+     console.log(1);
+     animate(document.documentElement, {
+         scrollTop: 0
+     }, 500)
+     //document.documentElement.scrollTop = 0;
+ })
+ $(".right-btn li:eq(1)").click(function () {
+     console.log(1);
+     animate(document.documentElement, {
+         scrollTop: 1073
+     }, 500)
+     //document.documentElement.scrollTop = 0;
+ })
+ $(".right-btn li:eq(2)").click(function () {
+     console.log(1);
+     animate(document.documentElement, {
+         scrollTop: 2160
+     }, 500)
+     //document.documentElement.scrollTop = 0;
+ })
+ $(".right-btn li:eq(3)").click(function () {
+     console.log(1);
+     animate(document.documentElement, {
+         scrollTop: 2880
+     }, 500)
+     //document.documentElement.scrollTop = 0;
+ })
 
  //      
  var flag = 0;
@@ -151,3 +182,37 @@
          $(".logo-con").css("top", "360px");
      }
  }
+ //content2 的鼠标事件
+ $(".pic-con-1-img:eq(0)").hover(function () {
+     //console.log(1)
+     $(".pic-con-1-img:eq(0) img").attr("src", "img/cont3-b.png");
+     $(this).css("background", "rgb(255,255,255)");
+ }, function () {
+     $(".pic-con-1-img:eq(0) img").attr("src", "img/cont3-w.png");
+     $(this).css("background", "none");
+ })
+ $(".pic-con-1-img:eq(1)").hover(function () {
+     //console.log(1)
+     $(".pic-con-1-img:eq(1) img").attr("src", "img/cont1-b.png");
+     $(this).css("background", "rgb(255,255,255)");
+ }, function () {
+     $(".pic-con-1-img:eq(1) img").attr("src", "img/cont1-w.png");
+     $(this).css("background", "none");
+ })
+ $(".pic-con-1-img:eq(2)").hover(function () {
+     //console.log(1)
+     $(".pic-con-1-img:eq(2) img").attr("src", "img/cont4-b.png");
+     $(this).css("background", "rgb(255,255,255)");
+ }, function () {
+     $(".pic-con-1-img:eq(2) img").attr("src", "img/cont4-w.png");
+     $(this).css("background", "none");
+ })
+ $(".pic-con-1-img:eq(3)").hover(function () {
+     //console.log(1)
+     $(".pic-con-1-img:eq(3) img").attr("src", "img/cont2-b.png");
+     $(this).css("background", "rgb(255,355,355)");
+ }, function () {
+     $(".pic-con-1-img:eq(3) img").attr("src", "img/cont2-w.png");
+     $(this).css("background", "none");
+ })
+ //  $("pic-con-1-img")

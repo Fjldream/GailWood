@@ -16,11 +16,13 @@ function animate(obj, attrObj, duration, fn, callback) {
     var change = {};
     var time = 0;
     var fn = fn || Tween.Linear;
-
+    //console.log(fn);
+    //获取每个属性的初始值
     for (var i in attrObj) {
         start[i] = css(obj, i);
         change[i] = attrObj[i] - start[i];
     }
+
 
     obj.t = setInterval(function () {
         time += 50;
@@ -37,7 +39,6 @@ function animate(obj, attrObj, duration, fn, callback) {
                 callback();
             }
         }
-
     }, 50);
 
 }
@@ -52,6 +53,9 @@ function css(obj, attr, val) {
             case "border":
                 return getComputedStyle(obj, null)[attr];
                 break;
+            case "scrollTop":
+                return obj[attr];
+                break;
             default:
                 return parseInt(getComputedStyle(obj, null)[attr]);
                 break;
@@ -64,6 +68,10 @@ function css(obj, attr, val) {
             case "opacity":
             case "border":
                 return obj.style[attr] = val;
+                break;
+            case "scrollTop":
+                return obj[attr] = val;
+                break;
             default:
                 return obj.style[attr] = val + "px";
         }
