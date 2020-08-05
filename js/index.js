@@ -46,6 +46,10 @@
      }, 500)
      //document.documentElement.scrollTop = 3090;
  })
+ $(".bro-btn:eq(4)").click(function () {
+     console.log(1);
+     window.location.href = "moreContent.html";
+ })
  //右侧导航
  $(".right-btn li:eq(0)").click(function () {
      console.log(1);
